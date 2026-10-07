@@ -328,21 +328,35 @@
         }
 
 
-        .hero-art:after {
+        .hero-logo {
 
-            content: "NOUS";
+    position: relative;
 
-            position: relative;
+    z-index: 2;
 
-            color: var(--cream);
+    width: 42%;
 
-            font-family: Georgia, serif;
+    aspect-ratio: 1 / 1;
 
-            font-size: 58px;
+    display: flex;
 
-            letter-spacing: 0.16em;
+    align-items: center;
 
-        }
+    justify-content: center;
+
+}
+
+.hero-logo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
 
 
         /* =========================================================
@@ -1083,10 +1097,16 @@
 
 
         <div
-            class="hero-art"
-            aria-label="Elemento visual da identidade NOUS"
+    class="hero-art"
+    aria-label="Elemento visual da identidade NOUS"
+>
+    <div class="hero-logo">
+        <img
+            src="logo3.PNG"
+            alt="Logo NOUS"
         >
-        </div>
+    </div>
+</div>
 
     </section>
 
