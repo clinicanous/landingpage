@@ -1,0 +1,1651 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <!-- FAVICON -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>
+        NOUS — Centro Especializado em Saúde Mental
+    </title>
+
+
+    <style>
+
+        /* =========================================================
+           VARIÁVEIS / IDENTIDADE VISUAL
+        ========================================================= */
+
+        :root {
+
+            --terr: #A6533C;
+            --gold: #C98732;
+            --cream: #F2E6D5;
+            --ink: #34251f;
+            --white: #fffaf3;
+
+        }
+
+
+        /* =========================================================
+           CONFIGURAÇÕES GERAIS
+        ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: var(--ink);
+
+            background: var(--cream);
+
+        }
+
+
+        /* =========================================================
+           NAVEGAÇÃO
+        ========================================================= */
+
+        nav {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 10;
+
+            background:
+                rgba(242, 230, 213, 0.94);
+
+            backdrop-filter: blur(10px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 18px 6vw;
+
+            border-bottom:
+                1px solid rgba(166, 83, 60, 0.12);
+
+        }
+
+
+        .brand {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-weight: 500;
+
+            letter-spacing: 0.12em;
+
+        }
+
+
+        /* =========================================================
+           LOGO
+        ========================================================= */
+
+        .brand-logo {
+
+            height: 40px;
+
+            width: auto;
+
+            max-width: 150px;
+
+            display: block;
+
+            object-fit: contain;
+
+        }
+
+
+        nav a {
+
+            color: var(--ink);
+
+            text-decoration: none;
+
+            margin-left: 28px;
+
+            font-size: 13px;
+
+        }
+
+
+        nav .cta {
+
+            background: var(--terr);
+
+            color: white;
+
+            padding: 12px 18px;
+
+            border-radius: 30px;
+
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+
+            min-height: 78vh;
+
+            display: grid;
+
+            grid-template-columns:
+                1.05fr 0.95fr;
+
+            align-items: center;
+
+            padding: 7vw 8vw;
+
+            gap: 6vw;
+
+            overflow: hidden;
+
+        }
+
+
+        .eyebrow {
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.2em;
+
+            color: var(--terr);
+
+            font-size: 12px;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .hero h1 {
+
+            font-family: Georgia, serif;
+
+            font-weight: 400;
+
+            font-size:
+                clamp(48px, 7vw, 92px);
+
+            line-height: 1.08;
+
+            margin: 0 0 28px;
+
+        }
+
+
+        .hero h1 em {
+
+            font-style: normal;
+
+            color: var(--terr);
+
+        }
+
+
+        .hero p {
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            max-width: 540px;
+
+            color: #5d4c43;
+
+        }
+
+
+        .actions {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 32px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .btn {
+
+            padding: 15px 23px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+        }
+
+
+        .primary {
+
+            background: var(--terr);
+
+            color: #fff;
+
+        }
+
+
+        .secondary {
+
+            border:
+                1px solid var(--terr);
+
+            color: var(--terr);
+
+        }
+
+
+        /* =========================================================
+           ELEMENTO VISUAL DO HERO
+        ========================================================= */
+
+        .hero-art {
+
+            height: 480px;
+
+            border-radius:
+                45% 55% 52% 48%
+                /
+                40% 43% 57% 60%;
+
+            background: var(--terr);
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .hero-art:before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 55%;
+
+            height: 55%;
+
+            border-radius:
+                50% 50% 15% 50%;
+
+            background: var(--gold);
+
+            transform: rotate(18deg);
+
+        }
+
+
+        .hero-art:after {
+
+            content: "NOUS";
+
+            position: relative;
+
+            color: var(--cream);
+
+            font-family: Georgia, serif;
+
+            font-size: 58px;
+
+            letter-spacing: 0.16em;
+
+        }
+
+
+        /* =========================================================
+           SEÇÕES
+        ========================================================= */
+
+        .section {
+
+            padding: 100px 8vw;
+
+        }
+
+
+        .section.light {
+
+            background: var(--white);
+
+        }
+
+
+        .section-head {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 40px;
+
+            align-items: end;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .section h2 {
+
+            font-family: Georgia, serif;
+
+            font-size: 48px;
+
+            font-weight: 400;
+
+            margin: 0;
+
+        }
+
+
+        .section-head p {
+
+            max-width: 480px;
+
+            line-height: 1.7;
+
+            color: #67564d;
+
+        }
+
+
+        /* =========================================================
+           CARDS — ESPECIALIDADES
+        ========================================================= */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .card {
+
+            background: var(--cream);
+
+            padding: 34px;
+
+            border-radius: 28px;
+
+            min-height: 230px;
+
+        }
+
+
+        /* Psicologia */
+
+        .card:nth-child(1) {
+
+            background: var(--cream);
+
+        }
+
+
+        /* Psiquiatria */
+
+        .card:nth-child(2) {
+
+            background: var(--gold);
+
+            color: white;
+
+        }
+
+
+        /* Nutrição */
+
+        .card:nth-child(3) {
+
+            background: var(--terr);
+
+            color: white;
+
+        }
+
+
+        /* Neuropsicologia */
+
+        .card:nth-child(4) {
+
+            background: #E8D4BD;
+
+        }
+
+
+        /* Fonoaudiologia */
+
+        .card:nth-child(5) {
+
+            background: #D9B98F;
+
+        }
+
+
+        /* Terapia Ocupacional */
+
+        .card:nth-child(6) {
+
+            background: #EFE0CC;
+
+        }
+
+
+        /* Outros cuidados */
+
+        .card:nth-child(7) {
+
+            background: #C87558;
+
+            color: white;
+
+        }
+
+
+        .card small {
+
+            letter-spacing: 0.12em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .card h3 {
+
+            font-family: Georgia, serif;
+
+            font-size: 27px;
+
+            font-weight: 400;
+
+            margin: 45px 0 12px;
+
+        }
+
+
+        .card p {
+
+            line-height: 1.6;
+
+            opacity: 0.9;
+
+        }
+
+
+        /* =========================================================
+           SOBRE A NOUS
+        ========================================================= */
+
+        .about {
+
+            display: grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap: 8vw;
+
+            align-items: start;
+
+        }
+
+
+        .about-art {
+
+            min-height: 420px;
+
+            border-radius: 32px;
+
+            background: var(--gold);
+
+            position: relative;
+
+        }
+
+
+        .about-art:before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 14%;
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.65);
+
+            border-radius: 50%;
+
+        }
+
+
+        .about-art:after {
+
+            content: "N";
+
+            position: absolute;
+
+            inset: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            font-family: Georgia, serif;
+
+            font-size: 190px;
+
+            color: var(--terr);
+
+        }
+
+
+        .about p {
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            color: #5f4f46;
+
+        }
+
+
+        .quote {
+
+            font-family: Georgia, serif;
+
+            font-size: 30px;
+
+            line-height: 1.3;
+
+            color: var(--terr);
+
+            margin: 28px 0;
+
+        }
+
+
+        /* =========================================================
+           SUBTÍTULOS DA SEÇÃO SOBRE
+        ========================================================= */
+
+        .about-subtitle {
+
+            font-family: Georgia, serif;
+
+            font-size: 27px;
+
+            font-weight: 400;
+
+            color: var(--terr);
+
+            margin:
+                38px 0 18px;
+
+        }
+
+
+        /* =========================================================
+           LISTA DA SEÇÃO SOBRE
+        ========================================================= */
+
+        .about-list {
+
+            padding-left: 22px;
+
+            margin: 0;
+
+            color: #5f4f46;
+
+        }
+
+
+        .about-list li {
+
+            font-size: 16px;
+
+            line-height: 1.75;
+
+            margin-bottom: 20px;
+
+            padding-left: 6px;
+
+        }
+
+
+        .about-list li::marker {
+
+            color: var(--terr);
+
+        }
+
+
+        /* =========================================================
+           EQUIPE
+        ========================================================= */
+
+        .team {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .person {
+
+            background: var(--white);
+
+            border-radius: 26px;
+
+            overflow: hidden;
+
+        }
+
+
+        .portrait {
+
+            height: 260px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--cream),
+                    #dbc2a0
+                );
+
+            display: flex;
+
+            align-items: end;
+
+            justify-content: center;
+
+        }
+
+
+        .portrait div {
+
+            width: 145px;
+
+            height: 210px;
+
+            background:
+                rgba(166, 83, 60, 0.25);
+
+            border-radius:
+                90px 90px 0 0;
+
+        }
+
+
+        .person .txt {
+
+            padding: 25px;
+
+        }
+
+
+        .person h3 {
+
+            margin: 0 0 7px;
+
+            font-family: Georgia, serif;
+
+            font-size: 24px;
+
+            font-weight: 400;
+
+        }
+
+
+        .person p {
+
+            margin: 0;
+
+            color: #76645a;
+
+            font-size: 14px;
+
+        }
+
+
+        /* =========================================================
+           CONTATO / AGENDAMENTO
+        ========================================================= */
+
+        .contact {
+
+            background: var(--terr);
+
+            color: white;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 0.9fr;
+
+            gap: 70px;
+
+        }
+
+
+        .contact h2 {
+
+            font-size: 58px;
+
+        }
+
+
+        .contact p {
+
+            line-height: 1.8;
+
+            color: #f4dfca;
+
+        }
+
+
+        .contact-box {
+
+            background: var(--cream);
+
+            color: var(--ink);
+
+            padding: 35px;
+
+            border-radius: 28px;
+
+        }
+
+
+        .contact-box label {
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.12em;
+
+            display: block;
+
+            margin: 18px 0 7px;
+
+        }
+
+
+        .contact-box input,
+        .contact-box select {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border:
+                1px solid #d7c3ad;
+
+            border-radius: 10px;
+
+            background: #fffaf3;
+
+        }
+
+
+        .contact-box button {
+
+            margin-top: 20px;
+
+            width: 100%;
+
+            border: 0;
+
+            padding: 15px;
+
+            border-radius: 30px;
+
+            background: var(--gold);
+
+            color: white;
+
+            font-size: 15px;
+
+            cursor: pointer;
+
+        }
+
+
+        .contact-box button:hover {
+
+            opacity: 0.92;
+
+        }
+
+
+        /* =========================================================
+           RODAPÉ
+        ========================================================= */
+
+        footer {
+
+            padding: 28px 8vw;
+
+            background: #3a2923;
+
+            color: #eadac9;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            font-size: 12px;
+
+            letter-spacing: 0.04em;
+
+        }
+
+
+        /* =========================================================
+           RESPONSIVIDADE — TABLET / CELULAR
+        ========================================================= */
+
+        @media (max-width: 800px) {
+
+            nav a:not(.cta) {
+
+                display: none;
+
+            }
+
+
+            .hero,
+            .about,
+            .contact {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero {
+
+                padding-top: 60px;
+
+            }
+
+
+            .hero-art {
+
+                height: 330px;
+
+            }
+
+
+            .cards,
+            .team {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .section {
+
+                padding: 70px 6vw;
+
+            }
+
+
+            .section-head {
+
+                display: block;
+
+            }
+
+
+            .section h2 {
+
+                font-size: 40px;
+
+                margin-bottom: 18px;
+
+            }
+
+
+            .contact h2 {
+
+                font-size: 46px;
+
+            }
+
+
+            footer {
+
+                display: block;
+
+                line-height: 2;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         NAVEGAÇÃO
+    ========================================================= -->
+
+    <nav>
+
+        <div class="brand">
+
+            <img
+                src="logo.png"
+                alt="NOUS — Centro Especializado em Saúde Mental"
+                class="brand-logo"
+            >
+
+        </div>
+
+
+        <div>
+
+            <a href="#especialidades">
+                Especialidades
+            </a>
+
+            <a href="#sobre">
+                A clínica
+            </a>
+
+            <!--<a href="#equipe">
+                Equipe
+            </a>-->
+
+            <a
+                class="cta"
+                href="#contato"
+            >
+                Agendar atendimento
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero">
+
+
+        <div>
+
+            <div class="eyebrow">
+                Centro Especializado em Saúde Mental
+            </div>
+
+
+            <h1>
+
+                Um espaço de
+
+                <em class="cuidado">
+                    cuidado
+                </em>
+
+                .
+
+            </h1>
+
+
+            <p>
+
+                Um ambiente acolhedor para escuta,
+                cuidado, tratamento e recuperação.
+                Atendimento especializado com uma
+                abordagem humanizada, sensível e
+                individualizada.
+
+            </p>
+
+
+            <div class="actions">
+
+                <a
+                    class="btn primary"
+                    href="#contato"
+                >
+                    Quero agendar
+                </a>
+
+
+                <a
+                    class="btn secondary"
+                    href="#sobre"
+                >
+                    Conheça a NOUS
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="hero-art"
+            aria-label="Elemento visual da identidade NOUS"
+        >
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         ESPECIALIDADES
+    ========================================================= -->
+
+    <section
+        id="especialidades"
+        class="section light"
+    >
+
+
+        <div class="section-head">
+
+
+            <h2>
+
+                Cuidado que olha
+                <br>
+
+                para você por inteiro.
+
+            </h2>
+
+
+            <p>
+
+                A NOUS oferece um cuidado multiprofissional,
+                reunindo diferentes áreas da saúde para
+                proporcionar uma abordagem integrada e
+                individualizada para cada paciente.
+
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- PSICOLOGIA -->
+
+            <article class="card">
+
+                <small>
+                    01
+                </small>
+
+
+                <h3>
+                    Psicologia
+                </h3>
+
+
+                <p>
+
+                    Atendimento individualizado,
+                    com espaço para escuta,
+                    reflexão e desenvolvimento.
+
+                </p>
+
+            </article>
+
+
+            <!-- PSIQUIATRIA -->
+
+            <article class="card">
+
+                <small>
+                    02
+                </small>
+
+
+                <h3>
+                    Psiquiatria
+                </h3>
+
+
+                <p>
+
+                    Avaliação e acompanhamento
+                    especializado, integrando
+                    cuidado clínico e humano.
+
+                </p>
+
+            </article>
+
+
+            <!-- NUTRIÇÃO -->
+
+            <article class="card">
+
+                <small>
+                    03
+                </small>
+
+
+                <h3>
+                    Nutrição
+                </h3>
+
+
+                <p>
+
+                    Orientação nutricional integrada
+                    ao cuidado, considerando a relação
+                    entre alimentação e bem-estar.
+
+                </p>
+
+            </article>
+
+
+            <!-- NEUROPSICOLOGIA -->
+
+            <article class="card">
+
+                <small>
+                    04
+                </small>
+
+
+                <h3>
+                    Neuropsicologia
+                </h3>
+
+
+                <p>
+
+                    Avaliação e acompanhamento
+                    de aspectos cognitivos,
+                    emocionais e comportamentais.
+
+                </p>
+
+            </article>
+
+
+            <!-- FONOAUDIOLOGIA -->
+
+            <article class="card">
+
+                <small>
+                    05
+                </small>
+
+
+                <h3>
+                    Fonoaudiologia
+                </h3>
+
+
+                <p>
+
+                    Atendimento especializado voltado
+                    à comunicação, linguagem, fala e
+                    outras necessidades relacionadas.
+
+                </p>
+
+            </article>
+
+
+            <!-- TERAPIA OCUPACIONAL -->
+
+            <article class="card">
+
+                <small>
+                    06
+                </small>
+
+
+                <h3>
+                    Terapia Ocupacional
+                </h3>
+
+
+                <p>
+
+                    Cuidado voltado à autonomia,
+                    funcionalidade e participação
+                    nas atividades do cotidiano.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         SOBRE A NOUS
+    ========================================================= -->
+
+    <section
+        id="sobre"
+        class="section"
+    >
+
+
+        <div class="about">
+
+
+            <div class="about-art">
+            </div>
+
+
+            <div>
+
+
+                <div class="eyebrow">
+
+                    Sobre a NOUS
+
+                </div>
+
+
+                <h2>
+
+                    Clínica NOUS:
+                    Cuidado Humano e
+                    Especializado em
+                    Saúde Mental
+
+                </h2>
+
+
+                <p>
+
+                    A <strong>Clínica NOUS</strong>
+                    é um centro multiprofissional
+                    especializado em saúde mental,
+                    estruturado para oferecer um olhar
+                    integrado, humanizado e acolhedor
+                    para o bem-estar emocional e psicológico
+                    de cada paciente.
+
+                </p>
+
+
+                <!-- NOSSA PROPOSTA -->
+
+                <h3 class="about-subtitle">
+
+                    Nossa Proposta e Objetivo
+
+                </h3>
+
+
+                <ul class="about-list">
+
+
+                    <li>
+
+                        <strong>
+                            Escuta Ativa e Individualizada:
+                        </strong>
+
+                        Compreendemos que cada história
+                        é única. Nosso objetivo é proporcionar
+                        um ambiente seguro onde cada indivíduo
+                        seja acolhido em sua totalidade,
+                        sem julgamentos.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Abordagem Multiprofissional:
+                        </strong>
+
+                        Contamos com uma equipe integrada
+                        de especialistas em saúde mental —
+                        psicólogos, psiquiatra, neuropsicólogos,
+                        nutricionistas, fonoaudiólogos,
+                        terapeuta ocupacional e demais
+                        profissionais — que trabalham em conjunto
+                        para construir planos de cuidado alinhados
+                        às necessidades reais de cada pessoa.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Cuidado Preventivo e Terapêutico:
+                        </strong>
+
+                        Mais do que tratar sintomas,
+                        promovemos a autonomia emocional,
+                        o autoconhecimento e a qualidade
+                        de vida, enxergando a saúde mental
+                        como o pilar central para uma vida plena.
+
+                    </li>
+
+
+                </ul>
+
+
+                <!-- POR QUE ESCOLHER A NOUS -->
+
+                <h3 class="about-subtitle">
+
+                    Por que Escolher a NOUS?
+
+                </h3>
+
+
+                <p>
+
+                    Na NOUS, acreditamos que o cuidado
+                    em saúde mental deve ser acessível,
+                    ético e profundamente empático.
+
+                    Unimos a excelência técnica científica
+                    à sensibilidade humana, criando um espaço
+                    de transformação, acolhimento e reconstrução
+                    de caminhos para você e para quem você ama.
+
+                </p>
+
+
+                <!-- FRASE FINAL -->
+
+                <p class="quote">
+
+                    “Dar o primeiro passo em busca de ajuda
+                    é um ato de coragem. Na NOUS, você nunca
+                    caminha sozinho.”
+
+                </p>
+
+
+                <a
+                    class="btn secondary"
+                    href="#contato"
+                >
+
+                    Conheça nosso espaço
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         CONTATO / AGENDAMENTO
+    ========================================================= -->
+
+    <section
+        id="contato"
+        class="section contact"
+    >
+
+
+        <div>
+
+
+            <div
+                class="eyebrow"
+                style="color:#f1d3ae"
+            >
+
+                Agendamento
+
+            </div>
+
+
+            <h2>
+
+                Comece seu cuidado.
+
+            </h2>
+
+
+            <p>
+
+                Escolha uma forma de contato e nossa equipe
+                poderá orientar você sobre disponibilidade,
+                modalidade de atendimento e próximos passos.
+
+            </p>
+
+
+        </div>
+
+
+        <!-- =====================================================
+             FORMULÁRIO
+             Ao clicar em "Solicitar atendimento",
+             abre o WhatsApp da NOUS.
+        ====================================================== -->
+
+        <form
+            class="contact-box"
+            onsubmit="
+                event.preventDefault();
+
+                const nome =
+                    this.querySelector(
+                        'input[placeholder=\'Seu nome\']'
+                    ).value;
+
+                const opcao =
+                    this.querySelector('select').value;
+
+                const whatsapp =
+                    this.querySelector(
+                        'input[placeholder=\'(00) 00000-0000\']'
+                    ).value;
+
+                const mensagem =
+                    'Olá! Gostaria de solicitar atendimento na Clínica NOUS.' +
+                    '\\n\\n' +
+                    'Nome: ' + nome +
+                    '\\n' +
+                    'Opção escolhida: ' + opcao +
+                    '\\n' +
+                    'WhatsApp: ' + whatsapp;
+
+                const url =
+                    'https://wa.me/5581991102231?text=' +
+                    encodeURIComponent(mensagem);
+
+                window.open(
+                    url,
+                    '_blank'
+                );
+            "
+        >
+
+
+            <label>
+                Nome
+            </label>
+
+
+            <input
+                required
+                placeholder="Seu nome"
+            >
+
+
+            <label>
+                Como podemos ajudar?
+            </label>
+
+
+            <select
+                required
+            >
+
+
+                <option>
+                    Quero agendar uma consulta
+                </option>
+
+
+                <option>
+                    Quero conhecer a clínica
+                </option>
+
+
+                <option>
+                    Tenho outra dúvida
+                </option>
+
+
+            </select>
+
+
+            <label>
+                WhatsApp
+            </label>
+
+
+            <input
+                type="tel"
+                placeholder="(00) 00000-0000"
+            >
+
+
+            <button
+                type="submit"
+            >
+
+                Solicitar atendimento
+
+            </button>
+
+
+        </form>
+
+
+    </section>
+
+
+    <!-- =========================================================
+         RODAPÉ
+    ========================================================= -->
+
+    <footer>
+
+
+        <span>
+
+            NOUS · Centro Especializado
+            em Saúde Mental
+
+        </span>
+
+
+        <span>
+
+            © 2026 · Todos os direitos reservados
+
+        </span>
+
+
+    </footer>
+
+
+</body>
+
+</html>
